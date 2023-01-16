@@ -1,0 +1,14 @@
+.post{
+    margin: 20px 0 0 0;
+}
+.post-card{
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-text{
+    text-align: justify;
+    line-height: 17px;
+    margin: 20px 0 0 0;
+}

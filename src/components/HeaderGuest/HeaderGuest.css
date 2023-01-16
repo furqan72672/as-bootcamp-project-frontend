@@ -18,13 +18,13 @@
     align-items: center;
     justify-content: space-between;
 }
-.header-left h1{
+.header-left h3{
     color: #fff;
     margin: 0 0 0 10px;
 }
 .logo-header{
-    height: 10vh;
-    width: 10vh;
+    height: 50px;
+    width: 53px;
 }
 .header-right{
     height:20vh;

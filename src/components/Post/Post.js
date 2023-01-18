@@ -27,7 +27,9 @@ function Post({venue}){
                         </Col>
                     </Row>
                     <Row>
-                        <Card.Text className="post-text">{venue.description}</Card.Text>
+                        <Col style={{width:'50vw'}}>
+                            <Card.Text className="post-text">{venue.description}</Card.Text>   
+                        </Col>
                     </Row>
                 </Card.Body>
             </Card> 

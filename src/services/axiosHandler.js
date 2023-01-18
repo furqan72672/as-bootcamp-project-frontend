@@ -6,7 +6,7 @@ export const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
     config=>{
-        if(config.url==='/auth/login')return config
+        if(config.url.indexOf('/auth/')>-1)return config
         const token=localStorage.getItem('token')
         config.headers['authorization']=`Bearer ${token}`
         return config

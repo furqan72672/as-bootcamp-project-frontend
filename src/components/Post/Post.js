@@ -11,7 +11,7 @@ function Post({venue}){
                 <Card.Body>
                     <Row>
                         <Col>
-                            <Carousel style={{width:'100%'}} nextLabel="" prevLabel="" prevIcon={venue.images.length>1?<FontAwesomeIcon icon={faChevronCircleLeft} style={{fontSize:35,fontWeight:'bold'}}/>:null} nextIcon={venue.images.length>1?<FontAwesomeIcon icon={faChevronCircleRight} style={{fontSize:35}}/>:null}>
+                            <Carousel style={{width:'50vw'}} nextLabel="" prevLabel="" prevIcon={venue.images.length>1?<FontAwesomeIcon icon={faChevronCircleLeft} style={{fontSize:35,fontWeight:'bold'}}/>:null} nextIcon={venue.images.length>1?<FontAwesomeIcon icon={faChevronCircleRight} style={{fontSize:35}}/>:null}>
                                 {
                                     venue.images.map((img)=>(
                                         <Carousel.Item style={{width:'100%',padding:0}}>

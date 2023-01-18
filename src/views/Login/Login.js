@@ -9,17 +9,20 @@ function Login(){
     const navigate=useNavigate()
     const [validated, setValidated] = useState(false);
 
-    async function handleLogin(event){
-        const form = event.currentTarget;
-        event.preventDefault()
+    async function handleForgotPassword(e){
+        navigate('/auth/forgot-password')
+    }
+
+    async function handleLogin(e){
+        const form = e.currentTarget;
+        e.preventDefault()
         if (form.checkValidity() === false) {
-            event.stopPropagation();
+            e.stopPropagation();
         }
-        // console.log(event)
         setValidated(true);
         const payload={
-            email:event.target[0].value,
-            password:event.target[1].value
+            email:e.target[0].value,
+            password:e.target[1].value
         }
         await Service.login(payload)
         if(localStorage.getItem('token'))navigate('/')
@@ -51,6 +54,11 @@ function Login(){
                                             <Form.Control required type='password' defaultValue="12345678" ></Form.Control>
                                             <Form.Control.Feedback type="invalid">Field is required</Form.Control.Feedback>
                                         </FormGroup>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col className="d-flex justify-content-end">
+                                        <Card.Text className="custom-link" onClick={handleForgotPassword}>Forgot Password?</Card.Text>
                                     </Col>
                                 </Row>
                                 <Row className="mt-4">

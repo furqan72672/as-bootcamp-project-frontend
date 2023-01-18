@@ -10,6 +10,7 @@ import Signup from './views/Signup/Signup';
 import ForgotPassword from './views/ForgotPassword/ForgotPassword';
 import SiteLayoutAuth from './layouts/SiteLayoutAuth';
 import { Route, Routes, Navigate } from 'react-router-dom';
+import ResetPassword from './views/ResetPassword/ResetPassword';
 
 function App() {
   return (
@@ -24,7 +25,10 @@ function App() {
         <Route index element={<Navigate to='/auth/login' replace/>}/>
         <Route path="/auth/login" element={<Login/>}/>
         <Route path="/auth/signup" element={<Signup/>}/>
-        <Route path="/auth/forgot-password" element={<ForgotPassword/>}/>
+        <Route path="/auth/forgot-password">
+          <Route index element={<ForgotPassword/>}/>
+          <Route path="/auth/forgot-password/:key" element={<ResetPassword/>}/>
+        </Route>
         
       </Route>
     </Routes>

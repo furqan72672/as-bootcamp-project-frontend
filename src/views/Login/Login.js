@@ -13,6 +13,10 @@ function Login(){
         navigate('/auth/forgot-password')
     }
 
+    async function handleHome(e){
+        navigate('/')
+    }
+
     async function handleLogin(e){
         const form = e.currentTarget;
         e.preventDefault()
@@ -62,6 +66,9 @@ function Login(){
                                     </Col>
                                 </Row>
                                 <Row className="mt-4">
+                                    <Col className="d-flex justify-content-start">
+                                        <Button type="button" className="btn btn-danger" onClick={handleHome}>Cancel</Button>
+                                    </Col>
                                     <Col className="d-flex justify-content-end">
                                         <Button type="submit">Login</Button>
                                     </Col>

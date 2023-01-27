@@ -14,6 +14,7 @@ function HeaderAuth(){
                     <h1>Welcome To Events Bridge</h1>
                 </div>
                 <div className='btns'>
+                    <Button variant='outline-primary text-white' onClick={()=>{navigate('/')}}>Home</Button>
                     <Button variant='outline-primary text-white' onClick={()=>{navigate('/auth/login')}}>Login</Button>
                     <Button variant='outline-primary text-white' onClick={()=>{navigate('/auth/signup')}}>SignUp</Button>
                 </div>

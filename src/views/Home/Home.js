@@ -17,7 +17,7 @@ function Home(){
         <div className="d-flex flex-column align-items-center">
             {
                 venues.length?venues.map((venue)=>(<Post venue={venue}/>))
-                :<h2>No data</h2>
+                :<h2>Loading</h2>
             }
         </div>
     )

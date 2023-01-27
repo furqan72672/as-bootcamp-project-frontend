@@ -27,7 +27,7 @@
 }
 
 .header-right-auth .btns{
-    width: 180px;
+    width: 20vw;
     display: flex;
     justify-content: space-around;
 }

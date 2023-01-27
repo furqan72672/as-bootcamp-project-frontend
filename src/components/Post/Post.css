@@ -1,5 +1,5 @@
 .post{
-    margin: 20px 0 0 0;
+    margin: 50px 0 0 0;
 }
 .post-card{
     width: 55vw;
@@ -11,4 +11,22 @@
     text-align: justify;
     line-height: 17px;
     margin: 20px 0 0 0;
+}
+
+.star-icon:hover{
+    color: yellow;
+    font-size: 230%;
+}
+
+.message-icon{
+    margin-left: 10px;
+}
+
+.message-icon:hover{
+    color: #35b994;
+    font-size: 220%;
+}
+
+.star-icon-filled{
+    color: yellow
 }

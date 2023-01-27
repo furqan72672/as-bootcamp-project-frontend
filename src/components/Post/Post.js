@@ -1,5 +1,6 @@
-import { faChevronCircleLeft, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons"
+import { faChevronCircleLeft, faChevronCircleRight, faStar as faStarFilled } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar,faComment } from "@fortawesome/free-regular-svg-icons"
 import { Card, Carousel, Col, Row } from "react-bootstrap"
 import './Post.css'
 
@@ -32,7 +33,17 @@ function Post({venue}){
                         </Col>
                     </Row>
                 </Card.Body>
-            </Card> 
+            </Card>
+            <Row style={{marginTop:10}}>
+                <Col style={{marginLeft:28}}>
+                    <FontAwesomeIcon icon={faStar} size='2xl' className="star-icon"></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faComment} size='2xl' className="message-icon"></FontAwesomeIcon>
+                </Col>
+                <Col style={{marginRight:28, display:'flex',justifyContent:'end'}}>
+                    {/* {venue.rating&&venue.rating.stars} */}
+                    <FontAwesomeIcon icon={faStarFilled} size='xl' className="star-icon-filled"></FontAwesomeIcon>
+                </Col>
+            </Row>
         </div>
     )
 }
